@@ -6,7 +6,7 @@ dados = pd.read_csv('dadosbr.csv')
 # Funções para filtrar dados
 def filtrar_por_profissao_ou_habilidades(dados, palavra_chave):
     return dados[dados[' cargo'].str.contains(palavra_chave, case=False, na=False) | 
-                 dados[' cargo'].str.contains(palavra_chave, case=False, na=False)]
+                 dados[' habilidades de trabalho'].str.contains(palavra_chave, case=False, na=False)]
 
 def filtrar_por_especialidade(dados, especialidade):
     return dados[dados[' cargo'].str.contains(especialidade, case=False, na=False)]
